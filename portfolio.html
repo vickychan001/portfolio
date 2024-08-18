@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="menu-icon" onclick="toggleMenu(event)">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <h1>I am Vignesh</h1>
+            <img src="profile.jpg" class="header-image">
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <ul>
+                <li><a href="#home" onclick="hideMenu()">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="#about" onclick="hideMenu()">About <i class="fas fa-user"></i></a></li>
+                <li><a href="#projects" onclick="hideMenu()">Projects <i class="fas fa-folder"></i></a></li>
+                <li><a href="#skills" onclick="hideMenu()">Skills <i class="fas fa-code"></i></a></li>
+                <li><a href="#education" onclick="hideMenu()">Education <i class="fas fa-graduation-cap"></i></a></li>
+                <li><a href="#certifications" onclick="hideMenu()">Certifications <i class="fas fa-certificate"></i></a></li>
+                <li><a href="#contact" onclick="hideMenu()">Contact <i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>As a Cyber Security Analyst and passionate developer, I am committed to safeguarding digital landscapes while crafting innovative solutions. My expertise lies in identifying vulnerabilities and implementing robust security measures. Explore my portfolio to see how I blend security with development to create resilient and efficient systems. Let’s connect and elevate the standards of cybersecurity together.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p> I am an efficient Cyber Security Analyst and passionate developer dedicated to continuous improvement and skill enhancement. With a strong foundation in cybersecurity principles and a knack for problem-solving, I thrive in dynamic environments where I can apply my expertise to protect digital assets. I am committed to staying ahead of industry trends, constantly honing my skills in programming and security technologies to deliver innovative solutions that drive success.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>landing page of website</h3>
+            <p> Developed a visually appealing and fully responsive landing page website that adapts seamlessly across various devices and screen sizes. The project emphasizes user experience and accessibility, featuring a clean design, intuitive navigation, and optimized performance to enhance user engagement.
+                <a href="https://github.com/vickychan001/FSD" target="_blank">View on GitHub</a>
+            </p>
+        </div>
+        <div class="project">
+            <h3>prodigy infotech Tasks</h3>
+            <p>Description: Created a comprehensive suite of tools using Python, including an image encryption application, a keylogger, and a network traffic packet analyzer. This project demonstrates my ability to implement advanced cybersecurity techniques, focusing on data protection and network monitoring. The tools are designed to enhance security measures and provide insights into network activities.
+                <a href="https://github.com/vickychan001/prodigy" target="_blank">View on GitHub</a>
+            </p>
+        </div>
+        
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-js-square"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-node-js"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-python"></i> <!-- Add Python icon -->
+                <p>Python</p> <!-- Add Python text -->
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-github"></i>
+                <p>GitHub</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>SSLC - Meenakshi Matric.Hr.Sec School (2018) with 96.6%</li>
+            <li>HSC - Meenakshi Matric.Hr.Sec School (2020) with 79.9%</li>
+            <li>Bachelor of Science in Computer Science - The M.D.T. Hindu College (2023) with 7.9 (CGPA)</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications and Internships</h2>
+        <ul>
+            <li>shadowFox Internship - for CyberSecurity (mar-apr 2024)</li>
+            <li>prodigy Infotech Internship - for python Security tool management (may-jun 2024)</li>
+            <li>cousera google cybersecurity certificate</li>
+            <li>SOC foundational certificate</li>
+        </ul>
+        </ul>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-icons">
+            <a href="mailto:vv923176@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/vickychan001" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vignesh-s-16687929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation(); // Prevent click event from bubbling up
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function hideMenu() {
+            document.getElementById('dropdownMenu').style.display = 'none';
+        }
+
+        // Hide the dropdown menu when clicking outside of it
+        document.addEventListener('click', hideMenu);
+    </script>
+</body>
+</html>
